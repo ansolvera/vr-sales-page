@@ -70,6 +70,12 @@ exports.default = series(
     watchTask
     );
 
+// GULP BUILD TASK
+exports.build = series(
+    scssTask,
+    jsTask
+);
+
 // WATCH TASK
 function watchTask() {
     watch('dist/.*html', browsersyncReload);

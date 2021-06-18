@@ -1,3 +1,4 @@
 assets
+includes
 node_modules
-.DS_Stores
+.DS_Store

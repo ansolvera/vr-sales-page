@@ -6,20 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matthew Hussey Virtual Retreat</title>
 
+    <!-- CUSTOM STYLESHEET -->
     <link rel="stylesheet" type="text/css" href="main.css">
 
     <!-- ALPINE JS -->
     <script src="//unpkg.com/alpinejs" defer></script>
 
+    <!-- EMBLA CAROUSEL -->
+    <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js" defer></script>
+
 </head>
+
 <body>
 
     <!-- HEADER -->
     <header id="header" class="header shadow-2xl">
         <div class="container">
-            <div class=" header__top flex-row justify-between items-center">
-                <a id="brand" href="/">
-                    <img src="/static/img/mh-logo-white.svg" alt="">
+            <div id="header__top" class="flex-row justify-between items-center">
+                <a id="header__brand" href="/">
+                    <img src="/static/img/mh-logo-white.svg" alt="Matthew Hussey logo">
                 </a>
                 <div id="countdown" class="flex-row justify-center items-center is-hidden-for-mobile">
                     <div class="countdown__wrapper flex-col justify-center items-center">
@@ -39,16 +44,16 @@
                         <h3 id="secondslabel" class="text-xs text-center">Seconds</h3>
                     </div>
                 </div>
-                <a href="/" class="btn is-small is-hidden-for-mobile">Book Now</a>
+                <a href="#invest" class="btn is-small is-hidden-for-mobile">Book Now</a>
             </div>
         </div>
         <hr>
         <div class="container">
-            <nav id="navigation" class="header__bottom is-hidden-for-mobile">
+            <nav id="navigation" class="is-hidden-for-mobile">
                 <div class="flex-row justify-center items-center">
                     <a href="#expect">Why attend?</a>
                     <a href="#who">Who is this for?</a>
-                    <a href="#lives">The lives we've changed?</a>
+                    <a href="#lives">The lives we've changed</a>
                     <a href="#bonus">Special bonuses</a>
                     <a href="#faq">FAQs</a>
                 </div>
@@ -64,9 +69,9 @@
             <div id="hero__video-wrapper">
                 <div class="flex-row justify-center items-center">
                     <div id="ribbon" class="flex-row justify-between items-center shadow-lg">
-                        <img src="/static/img/volume-icon.svg" alt="" class="mr-16">
+                        <img src="/static/img/volume-icon.svg" alt="Volume icon" class="mr-16">
                         <p class="text-sm text-center mr-16">Make sure your sound is turned ON!</p>
-                        <img id="close" src="/static/img/x-icon.svg" alt="">
+                        <img id="close" src="/static/img/x-icon.svg" alt="Close icon">
                     </div>
                 </div>
                 <iframe id="hero__video" src="https://www.youtube.com/embed/he2nwtfzTFQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -77,12 +82,12 @@
         <section id="proof" class="section py-80">
             <div class="container">
                 <div class="flex-row justify-around items-center wrap">
-                    <img src="static/img/netflix-logo.svg" alt="">
-                    <img src="static/img/bi-logo.svg" alt="">
-                    <img src="static/img/nyt-logo.svg" alt="">
-                    <img src="static/img/gma-logo.svg" alt="">
-                    <img src="static/img/abc-logo.svg" alt="">
-                    <img src="static/img/iheartradio-logo.svg" alt="">
+                    <img src="static/img/netflix-logo.svg" alt="Netflix logo" loading="lazy">
+                    <img src="static/img/bi-logo.svg" alt="Business Insider logo" loading="lazy">
+                    <img src="static/img/nyt-logo.svg" alt="New York Times logo" loading="lazy">
+                    <img src="static/img/gma-logo.svg" alt="Good Morning America logo" loading="lazy">
+                    <img src="static/img/abc-logo.svg" alt="ABC logo" loading="lazy">
+                    <img src="static/img/iheartradio-logo.svg" alt="iHeartRadio logo" loading="lazy">
                 </div>
             </div>
         </section>
@@ -91,7 +96,15 @@
         <section id="transform" class="section is-gray py-120">
             <div class="container">
                 <article class="prose">
-                    <h2 class="text-6xl text-center mb-80">Transform your life and </br> claim your happiness <span class="gold-text">now</span></h2>
+                    <h2 class="text-center mb-80">Transform your life and </br> claim your happiness <span class="gold-text">now</span></h2>
+                    <div class="grid-cols-2 gap-64 mb-80">
+                        <div class="flex-col justify-center items-center">
+                            <div id="polaroid">
+                                <img src="/static/img/matt_transform.webp" alt="A photograph of Matthew Hussey sitting outside" loading="lazy">
+                            </div>
+                        </div>
+                        <p>I’m Matthew Hussey, industry leading dating expert, world-renowned personal development coach and New York Times best-selling author.</p>
+                    </div>
                     <div class="prose__content">
                         <p>For the past 14 years I’ve coached millions from around the globe through my digital platforms and live events and in that time have developed a reputation for helping people achieve the life they’ve always dreamed of.</p>
                         <p>The pinnacle of where I get to do this is in my Live Retreat program, the purpose of which is to take people through a fully immersive process to transform every aspect of not just their lifestyle, but their <span class="highlight"><strong>mindset, relationships, emotional well being</strong></span> and <span class="highlight"><strong>core confidence</strong></span> too.</p>
@@ -104,8 +117,9 @@
                         <p>I’ll take you through the life-changing process LIVE online, alongside my team and an incredible tribe who are on the same journey, there to support you every step of the way.</p>
                     </div>
                     <div class="callout is-white my-80">
-                        <h2 class="text-5xl text-center mb-40">Begin creating the life </br> you want, starting today</h2>
-                        <p class="text-xl text-center mb-40">Just like it has for so many people like you, the <em>Matthew Hussey Virtual Retreat</em> can help you now, more than ever to...</p>
+                        <h3 class="text-center mb-40">Begin creating the life </br> you want, starting today</h3>
+                        <p class="text-center">Just like it has for so many people like you, the <em>Matthew Hussey Virtual Retreat</em> can help you now, more than ever to...</p>
+                        <hr/>
                         <ul class="checklist">
                             <li class="checklist__item">Create a new Blueprint for Happiness</li>
                             <li class="checklist__item">Reframe your losses, reclaim your strength and transform your story into something beautiful</li>
@@ -117,9 +131,10 @@
                         </ul>
                     </div>
                     <div class="callout is-dark mb-80">
-                        <h2 class="text-5xl text-center mb-40">Over the course of 3 immersive days together, you'll experience:</h2>
-                        <p class="text-xl text-center mb-40">Just like it has for so many people like you, the <em>Matthew Hussey Virtual Retreat</em> can help you now, more than ever to...</p>
-                        <ul class="checklist mb-80">
+                        <h3 class="text-center mb-40">Over the course of 3 immersive days together, you'll experience:</h3>
+                        <p class="text-center mb-40">Just like it has for so many people like you, the <em>Matthew Hussey Virtual Retreat</em> can help you now, more than ever to...</p>
+                        <hr/>
+                        <ul class="checklist">
                             <li class="checklist__item"><strong>Daily LIVE coaching</strong> with me and my dad, Steve</li>
                             <li class="checklist__item"><strong>Life-changing visualization</strong></li>
                             <li class="checklist__item"><strong>In-depth Q&A sessions</strong> with me</li>
@@ -129,19 +144,19 @@
                             <li class="checklist__item"><strong>All streamed live to your computer, in the comfort of your home.</strong></li>
                         </ul>
                         <hr/>
-                        <p class="text-xl text-center">As well as:</p>
+                        <p class="text-center uppercase">As well as:</p>
                         <div class="grid-cols-2 gap-32">
                             <div class="flex-col justify-start items-start">
-                                <ul class="checklist">
-                                    <li class="checklist__item is-small">2 live preparation sessions prior to Sept. 24</li>
-                                    <li class="checklist__item is-small">A very special welcome gift</li>
-                                    <li class="checklist__item is-small">2 weeks of UNLIMITED access to the event recordings</li>
+                                <ul class="sub-checklist">
+                                    <li class="checklist__item">2 live preparation sessions prior to Sept. 24</li>
+                                    <li class="checklist__item">A very special welcome gift</li>
+                                    <li class="checklist__item">2 weeks of UNLIMITED access to the event recordings</li>
                                 </ul>
                             </div>
                             <div class="flex-col justify-start items-start">
-                                <ul class="checklist">
-                                    <li class="checklist__item is-small">A comprehensive "Cheat-Sheet" FILLED with notes from the event</li>
-                                    <li class="checklist__item is-small">A private Facebook community where you will meet and keep FRIENDS for life from this experience</li>
+                                <ul class="sub-checklist">
+                                    <li class="checklist__item">A comprehensive "Cheat-Sheet" FILLED with notes from the event</li>
+                                    <li class="checklist__item">A private Facebook community where you will meet and keep FRIENDS for life from this experience</li>
                                 </ul>
                             </div>
                         </div>
@@ -153,11 +168,12 @@
 
         <!-- READY TO LEVEL UP -->
         <section id="level" class="section py-120 is-dark-gray">
+            <div id="level__overlay"></div>
             <div class="container">
                 <article class="prose">
-                    <h2 class="text-6xl text-center mb-80">Ready to <span class="beige-text">level up</span> in 2021? Talk to a retreat specialist today!</h2>
+                    <h2 class="text-center mb-80">Ready to <span class="beige-text">level up</span> in 2021? Talk to a retreat specialist today!</h2>
                     <div class="flex-row justify-center items-center mb-80">
-                        <a href="#" class="btn is-large">Register now</a>
+                        <a href="#invest" class="btn is-large">Register now</a>
                     </div>
                     <div class="grid-cols-2 gap-32">
                         <div class="testimonial flex-col justify-start items-start">
@@ -166,7 +182,7 @@
                             </div>
                             <div class="flex-row justify-start items-center">
                                 <div class="avatar shadow-md mr-16">
-                                    <img src="/" alt="">
+                                    <img src="/static/img/valerie.webp" alt="Photo of Valerie D." loading="lazy">
                                 </div>
                                 <div class="details text-base">
                                     <p>Valerie D.</p>
@@ -179,7 +195,7 @@
                             </div>
                             <div class="flex-row justify-start items-center">
                                 <div class="avatar shadow-md mr-16">
-                                    <img src="/" alt="">
+                                    <img src="/static/img/navneet.webp" alt="Photo of Navneet J." loading="lazy">
                                 </div>
                                 <div class="details text-base">
                                     <p>Navneet J.</p>
@@ -200,12 +216,13 @@
                         <p>This extraordinary 3-day event brings together extraordinary people from all over the world with a burning desire to transform their lives from the inside out.</p>
                         <p>I'll be personally guiding you through a process that ultimately gives you the two essential tools you can use to achieve absolutely everything you want.</p>
                         <ol>
-                            <li><p>A Blueprint For Your Ideal Life</p></li>
-                            <li><p>The Core Confidence to Take Action and Create It</p></li>
+                            <li>A Blueprint For Your Ideal Life</li>
+                            <li>The Core Confidence to Take Action and Create It</li>
                         </ol>
                     </div>
                     <div class="callout is-beige my-80">
-                        <h2 class="text-5xl text-center mb-40">Here are the strategies we'll use to get you there:</h2>
+                        <h3 class="text-center mb-40">Here are the strategies we'll use to get you there:</h3>
+                        <hr/>
                         <ul class="checklist">
                             <li class="checklist__item">We'll look at your long-held (and outdated) limiting beliefs about your identity and help you <strong>define who you want to be, starting NOW.</strong></li>
                             <li class="checklist__item">You'll complete a series of exercises designed by me to <strong>break through those barriers that have been holding you back</strong> from the things you deserve most, like love, success, friendship, health, happiness and self-acceptance.</li>
@@ -213,7 +230,7 @@
                             <li class="checklist__item">You'll learn how to manage your emotions so you can <strong>banish overwhelm and procrastination,</strong> overcome fear, and get off the emotional rollercoaster for good.</li>
                         </ul>
                     </div>
-                    <div class="prose__content">
+                    <div>
                         <p>And finally, I'll take you through a life-changing experience that will make you believe, once and for all, that you are beyond "good enough" — <span class="highlight"><strong>You are worthy of the best in life ...</strong></span></p>
                         <p>... even if you&'ve never felt this way before, I will help you get to this place during our 3 days together.</p>
                         <p>No more looking outside for validation, no more telling yourself you&#39;ll be &quot;good enough&quot; once you hit that next milestone ... <span class="highlight"><strong>you will walk away from the <em>Virtual Retreat</em> with an unshakeable core confidence.</strong></span></p>
@@ -226,37 +243,32 @@
         <!-- WHO IS THIS EVENT FOR -->
         <section id="who" class="section py-120 is-gray">
             <div class="container">
-                <h2 class="text-6xl text-center mb-80">Who is this event for?</h2>
+                <h2 class="text-center mb-80">Who is this event for?</h2>
                 <div class="tabs grid-cols-2 gap-64" x-data="{ tab: 'one' }">
                     <div class="tabs__wrapper flex-col justify-start items-stetch">
                         <a href="#" :class="{ 'is-active': tab === 'one' }" class="tab" @click.prevent="tab = 'one'">
                             <div class="flex-col justify-start items-start">
-                                <h3 class="text-lg mb-10">Point #1</h3>
-                                <p class="text-base">You're Stuck in a Rut / At a Crossroads / In Transition</p>
+                                <h3 class="text-xl">You're Stuck in a Rut / At a Crossroads / In Transition</h3>
                             </div>
                         </a>
                         <a href="#" :class="{ 'is-active': tab === 'two' }" class="tab" @click.prevent="tab = 'two'">
                             <div class="flex-col justify-start items-start">
-                                <h3 class="text-lg mb-10">Point #2</h3>
-                                <p class="text-base">Your Love Life Isn't Where You Want It To Be</p>
+                                <h3 class="text-xl">Your Love Life Isn't Where You Want It To Be</h3>
                             </div>
                         </a>
                         <a href="#" :class="{ 'is-active': tab === 'three' }" class="tab" @click.prevent="tab = 'three'">
                             <div class="flex-col justify-start items-start">
-                                <h3 class="text-lg mb-10">Point #3</h3>
-                                <p class="text-base">You Want To Get More Intentional About Your Actions And Stop Coasting</p>
+                                <h3 class="text-xl">You Want To Get More Intentional About Your Actions And Stop Coasting</h3>
                             </div>
                         </a>
                         <a href="#" :class="{ 'is-active': tab === 'four' }" class="tab" @click.prevent="tab = 'four'">
                             <div class="flex-col justify-start items-start">
-                                <h3 class="text-lg mb-10">Point #4</h3>
-                                <p class="text-base">You Want To Develop True Core Confidence and Self-Esteem</p>
+                                <h3 class="text-xl">You Want To Develop True Core Confidence and Self-Esteem</h3>
                             </div>
                         </a>
                         <a href="#" :class="{ 'is-active': tab === 'five' }" class="tab" @click.prevent="tab = 'five'">
                             <div class="flex-col justify-start items-start">
-                                <h3 class="text-lg mb-10">Point #5</h3>
-                                <p class="text-base">You’re Looking To Keep Momentum and Level Up</p>
+                                <h3 class="text-xl">You’re Looking To Keep Momentum and Level Up</h3>
                             </div>
                         </a>
                     </div>
@@ -282,7 +294,8 @@
         </section>
 
         <!-- READY TO BOOK-->
-        <section id="ready" class="section py-80 is-dark-gray">
+        <section id="ready" class="section py-120 is-dark-gray">
+            <div id="ready__overlay"></div>
             <div class="container">
                 <div class="grid-cols-2 gap-64">
                     <div class="testimonial flex-col justify-start items-start">
@@ -291,7 +304,7 @@
                         </div>
                         <div class="flex-row justify-start items-center">
                             <div class="avatar shadow-md mr-16">
-                                <img src="/" alt="">
+                                <img src="/static/img/gillian.webp" alt="Photo of Gillian E." loading="lazy">
                             </div>
                             <div class="details text-base">
                                 <p>Gillian E.</p>
@@ -299,8 +312,8 @@
                         </div>
                     </div>
                     <div class="cta flex-col justify-center items-center">
-                        <h3 class="text-4xl mb-40">Ready to book?</h3>
-                        <a href="#" class="btn is-large">Register Now</a>
+                        <h3 class="mb-40">Ready to book?</h3>
+                        <a href="#invest" class="btn is-large">Register Now</a>
                     </div>
                 </div>
             </div>
@@ -309,25 +322,54 @@
         <!-- THE LIVES WE'VE CHANGED -->
         <section id="lives" class="section py-120">
             <div class="container">
-                <h2 class="text-6xl text-center mb-80">The Lives We've Changed</h2>
-                <p class="text-xl text-center mb-80">The feedback from our last two Virtual Retreat’s has been nothing short of incredible. Hear what some of our recent graduates are saying about the program.</p>
-                <div class="flex-row justify-center items-center mb-80">
-                    <a href="/" class="btn is-large">Register Now</a>
-                </div>
-                <div id="carousel" x-data="{ slides: ['1', '2', '3', '4'], active: 0}">
-                    <div id="slide-wrapper" class="flex-row justify-start items-center no-wrap" x-ref="slider" x-on:scroll.debounce="active = Math.round($event.target.scrollLeft / ($event.target.scrollWidth / slides.length))">
-                        <template x-for="(slide, index) in slides" :key="index">
-                            <div class="slide flex-row justify-center items-center">
-                                <div class="thumbnail shadow-xl"></div>
-                            </div>
-                        </template>
+                <article class="prose">
+                    <div class="prose__content">
+                        <h2 class="text-center">The Lives We've Changed</h2>
+                        <p class="text-center">The feedback from our last two Virtual Retreat’s has been nothing short of incredible. Hear what some of our recent graduates are saying about the program.</p>
                     </div>
-                    <div id="carousel__bottom" class="flex-row justify-center items-center">
-                        <button class="carousel__btn" @click="$refs.slider.scrollLeft = $refs.slider.scrollLeft - ($refs.slider.scrollWidth / slides.length)" ><</button>
-                        <template x-for="(slide, index) in slides" :key="index">
-                            <span :class="{ 'is-active': active === index }"></span>
-                        </template>
-                        <button class="carousel__btn" @click="$refs.slider.scrollLeft = $refs.slider.scrollLeft - ($refs.slider.scrollWidth / slides.length)" >></button>
+                </article>
+                <div class="flex-row justify-center items-center mb-80">
+                    <a href="#invest" class="btn is-large">Register Now</a>
+                </div>
+                <!-- CAROUSEL COMPONENT -->
+                <div class="embla">
+                    <div class="embla__viewport">
+                        <div class="embla__container">
+                            <div id="terry" class="embla__slide flex-col justify-center items-start">
+                                <div class="thumbnail"></div>
+                                <p>"After my divorce from a 31 year marriage I was lost. Thanks to the Virtual Retreat I know that I have the tools to rebuild my life and to discover who I am and what I want out of it."</p>
+                            </div>
+                            <div id="liz" class="embla__slide flex-col justify-center items-star">
+                                <div class="thumbnail"></div>
+                                <p>I had gotten to a point in my life where I was stuck and I wasn't quite sure how to get myself out of it. Now a month on from the event I feel so much more confident and open to new opportunities."</p>
+                            </div>
+                            <div id="poppy" class="embla__slide">
+                                <div class="thumbnail"></div>
+                                <p>"I was struggling to get over my breakup. I was seeing a therapist, a breakup coach, spiritual healers, hypnotists and none of it worked. Now thanks to the Virtual Retreat I've never been happier. The 1% shifts have become big changes."</p>
+                            </div>
+                            <div id="noname1" class="embla__slide">
+                                <div class="thumbnail"></div>
+                                <p>"It had everything I needed to hear. I was surprised how much I could feel the love and passion from the team and community. The love and support is really precious and the friendships that I've made out of this Retreat mean the world to me."</p>
+                            </div>
+                            <div id="anna" class="embla__slide">
+                                <div class="thumbnail"></div>
+                                <p>"What surprised me the most was how quickly it worked. It wasn't days later, I felt lighter, more confident and freer seconds after tasks on the Virtual Retreat. I feel more dynamic and fun again. It's been such a benefit to me and my family. Thank you so much."</p>
+                            </div>
+                            <div id="noname2" class="embla__slide">
+                                <div class="thumbnail"></div>
+                                <p>"The experience was beyond. Everything a more. It didn't even feel like a Virtual Retreat. It just felt like I was right there in the room with you. This opened up new doors for me that I'm not able to shut and I just love it. This was exactly what I needed."</p>
+                            </div>
+                        </div>
+                        <div class="embla__btn-wrapper left flex-col justify-center items-center">
+                            <button class="embla__prev flex-row justify-center items-center">
+                                <img src="/static/img/arrow-left.svg" alt="Left arrow">
+                            </button>
+                        </div>
+                        <div class="embla__btn-wrapper right flex-col justify-center items-center">
+                            <button class="embla__next flex-row justify-center items-center">
+                                <img src="/static/img/arrow-right.svg" alt="Right arrow">
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -336,7 +378,7 @@
         <!-- BONUS -->
         <section id="bonus" class="section py-120 is-gray">
             <div class="container">
-                <h2 class="text-6xl text-center mb-80">Section for Bonus</h2>
+                <h2 class="text-center mb-80">Section for Bonus</h2>
                 <div class="callout is-white mb-80">
                     <div class="grid-cols-2 gap-64">
                         <img src="" alt="">
@@ -369,12 +411,13 @@
 
         <!-- ARE YOU READY TO INVEST -->
         <section id="invest" class="section py-120 is-dark-gray">
+            <div id="invest__overlay"></div>
             <div class="container">
-                <h2 class="text-6xl text-center mb-80">Are you ready to invest </br> in <span class="beige-text">yourself</span> this year?</h2>
-                <article class="prose mb-80">
+                <div class="helmet prose mb-80">
+                    <h2 class="text-6xl text-center mb-80">Are you ready to invest </br> in <span class="beige-text">yourself</span> this year?</h2>
                     <p>I have a hand-picked team of incredible <em>Retreat Specialists</em> who are dedicated to speaking on the phone with my <em>Retreat</em> applicants.</p>
                     <p>They are on hand to hear your story, talk you through the <em>Virtual Retreat</em> and answer any questions you may have. Even if you decide not to attend, I can promise that the call itself will be worthwhile to help you clarify your goals...</p>
-                </article>
+                </div>
                 <div class="callout is-transparent mb-80">
                     <form action="" id="form" class="form">
                         <input type="text" name="name" id="name" placeholder="Name" class="mb-10">
@@ -390,7 +433,7 @@
                         </div>
                         <div class="flex-row justify-start items-center">
                             <div class="avatar shadow-md mr-16">
-                                <img src="/" alt="">
+                                <img src="/static/img/jana.webp" alt="Photo of Jana A." loading="lazy">
                             </div>
                             <div class="details text-base">
                                 <p>Jana A.</p>
@@ -403,7 +446,7 @@
                         </div>
                         <div class="flex-row justify-start items-center">
                             <div class="avatar shadow-md mr-16">
-                                <img src="/" alt="">
+                                <img src="/static/img/ana.webp" alt="Photo of Ana C." loading="lazy">
                             </div>
                             <div class="details text-base">
                                 <p>Ana C.</p>
@@ -417,77 +460,91 @@
         <!-- DO YOU STILL HAVE QUESTIONS -->
         <section id="faq" class="section py-120">
             <div class="container">
-                <h2 class="text-6xl text-center mb-80">Do you still have questions? </br> We have answers.</h2>
+                <h2 class="text-center mb-80">Do you still have questions? </br> We have answers.</h2>
                 <div id="faq__wrapper">
                     <div class="faq" x-data="{ open: false }" @click.prevent="open = !open">
                         <div class="flex-row justify-between items-center">
                             <h4>How do I access the Matthew Hussey Virtual Retreat?</h4>
+                            <img src="/static/img/chevron-down.svg" alt="Show answer">
                         </div>
                         <p class="faq__answer" x-show.transition="open">We’ll be using the platform Hopin for the event. You’ll receive an email with all the instructions to create your free account after confirming your place. All you need to do is join from a compatible browser (Chrome and Firefox work best) and make sure you have a stable internet connection available.</p>
                     </div>
                     <div class="faq" x-data="{ open: false }" @click.prevent="open = !open">
                         <div class="flex-row justify-between items-center">
                             <h4>Can I watch the Virtual Retreat on my phone?</h4>
+                            <img src="/static/img/chevron-down.svg" alt="Show answer">
                         </div>
                         <p class="faq__answer" x-show.transition="open">If you absolutely have to, then yes the livestream will work just fine on your phone, but we recommend you connect to the largest screen you have available in order to maximise the experience. TV is best, but a laptop or tablet would work great too.</p>
                     </div>
                     <div class="faq" x-data="{ open: false }" @click.prevent="open = !open">
                         <div class="flex-row justify-between items-center">
                             <h4>Is the Matthew Hussey Virtual Retreat recorded?</h4>
+                            <img src="/static/img/chevron-down.svg" alt="Show answer">
                         </div>
                         <p class="faq__answer" x-show.transition="open">This 3 day event is streamed completely live, however the recordings will be made available for unlimited access for 2 weeks after. This gives you an incredible opportunity to repeat any part of the process, make more extensive notes and ensure you don’t miss a thing.</p>
                     </div>
                     <div class="faq" x-data="{ open: false }" @click.prevent="open = !open">
                         <div class="flex-row justify-between items-center">
                             <h4>Will there be an opportunity to ask questions during the Virtual Retreat?</h4>
+                            <img src="/static/img/chevron-down.svg" alt="Show answer">
                         </div>
                         <p class="faq__answer" x-show.transition="open">Not only will there be the opportunity to go live during the Q&A within each of the daily sessions, but you’ll also have the opportunity to feed in your questions via the live chat function too.</p>
                     </div>
                     <div class="faq" x-data="{ open: false }" @click.prevent="open = !open">
                         <div class="flex-row justify-between items-center">
                             <h4>Can I interact with the other attendees?</h4>
+                            <img src="/static/img/chevron-down.svg" alt="Show answer">
                         </div>
                         <p class="faq__answer" x-show.transition="open">Of course. The Matthew Hussey Virtual Retreat brings together extraordinary people from all over the world with a burning desire to transform their lives from the inside out. We encourage you to connect during the program via the live chat function, but you’ll also be invited to join the private Facebook group so that you can stay in touch with your new tribe and support one another in the months that follow.</p>
                     </div>
                     <div class="faq" x-data="{ open: false }" @click.prevent="open = !open">
                         <div class="flex-row justify-between items-center">
                             <h4>Is this a 'hands on' program?</h4>
+                            <img src="/static/img/chevron-down.svg" alt="Show answer">
                         </div>
                         <p class="faq__answer" x-show.transition="open">Absolutely, this program is designed to guide you through a proven process where you leave having put the work in. This isn’t about sitting back and simply listening, you’ll be actively participating in different journaling exercises, Q&A sessions and powerful visualizations. You’ll not just leave the event with a completely different mindset and confidence, but also an actionable blueprint for the next chapter of your life.</p>
                     </div>
                     <div class="faq" x-data="{ open: false }" @click.prevent="open = !open">
                         <div class="flex-row justify-between items-center">
                             <h4>Who will I be speaking to during my initial consultation?</h4>
+                            <img src="/static/img/chevron-down.svg" alt="Show answer">
                         </div>
                         <p class="faq__answer" x-show.transition="open">You’ll be speaking with one of my trusted Retreat Specialists. They are Emma, Michael and Lottie. These are some of my most trusted people and I can’t wait for you to speak with them. They’ve been working with me on this process for years and are on hand to hear your story. I promise, whatever the outcome, you’ll take value from the time you spend speaking with them.</p>
                     </div>
                     <div class="faq" x-data="{ open: false }" @click.prevent="open = !open">
                         <div class="flex-row justify-between items-center">
                             <h4>What is the purpose of the call?</h4>
+                            <img src="/static/img/chevron-down.svg" alt="Show answer">
                         </div>
                         <p class="faq__answer" x-show.transition="open">I’ve spent years refining this process and it’s designed to go deep (often deeper than people are even expecting) into the core of who you truly want to be, which is why I have my team take people through this immersive experience personally. They’ll be able to share more with you about the transformative process, answer your questions and help you decide if the program is a good fit for you.</p>
                     </div>
                     <div class="faq" x-data="{ open: false }" @click.prevent="open = !open">
                         <div class="flex-row justify-between items-center">
                             <h4>What will we be covering during my consultation with a Retreat Specialist?</h4>
+                            <img src="/static/img/chevron-down.svg" alt="Show answer">
                         </div>
                         <p class="faq__answer" x-show.transition="open">This is so much more than just a consultation, your call with one of my incredible specialist mentors will help you get clarity on your goals, the obstacles you want to overcome, and your direction for your future. This is your chance to open up and fully express your current frustrations and desires for change with my amazing Retreat Team.</p>
                     </div>
                     <div class="faq" x-data="{ open: false }" @click.prevent="open = !open">
                         <div class="flex-row justify-between items-center">
                             <h4>Is my consultation with a Retreat Specialist free?</h4>
+                            <img src="/static/img/chevron-down.svg" alt="Show answer">
                         </div>
                         <p class="faq__answer" x-show.transition="open">Yes, your consultation with your Retreat Specialist is completely free of charge. Just be sure to enter your timezone and country dialling code correctly when making your appointment. Alternatively they can contact you via Skype or WhatsApp if you’d prefer to use an internet based calling service.</p>
                     </div>
             </div>
         </section>
 
+        <!-- FINAL CTA SECTION -->
         <section id="final" class="section py-120 is-dark-gray">
+            <div id="final__overlay"></div>
             <div class="container">
-                <h2 class="text-6xl text-center mb-80">You can stay where you are, </br> or you can make an investment </br> in yourself</h2>
-                <p class="text-xl text-center mb-80">Don't wait a moment longer, claim your place on the September <em>Virtual Retreat</em> now and lock in your personal growth for 2021. Not only will we have the most incredible 3 days together, but committing to this now will click you into a different gear psychologically to know that you're carving out time to make yourself a priority.</p>
+                <div class="helmet prose">  
+                    <h2 class="text-center">You can stay where you are, </br> or you can make an investment in yourself</h2>
+                    <p class="text-center">Don't wait a moment longer, claim your place on the September <em>Virtual Retreat</em> now and lock in your personal growth for 2021. Not only will we have the most incredible 3 days together, but committing to this now will click you into a different gear psychologically to know that you're carving out time to make yourself a priority.</p>
+                </div>
                 <div class="flex-row justify-center items-center">
-                    <a href="/" class="btn is-large">Register now</a>
+                    <a href="#invest" class="btn is-large">Register now</a>
                 </div>
             </div>
         </section>
@@ -497,7 +554,7 @@
             <div class="container">
                 <div class="flex-row justify-between items-center">
                     <a href="/">
-                        <img src="/static/img/mh-logo-white.svg" alt="">
+                        <img src="/static/img/mh-logo-white.svg" alt="Matthew Hussey logo">
                     </a>
                     <nav class="flex-row justify-between items-center">
                         <a href="/">Terms & Conditions</a>
@@ -514,7 +571,7 @@
 
     </main>
     
-    <script type="text/javascript" src="index.js"></script>
+    <script type="module" src="index.js"></script>
 
 </body>
 </html>

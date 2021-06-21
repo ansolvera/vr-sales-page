@@ -26,22 +26,27 @@
                 <a id="header__brand" href="/">
                     <img src="/static/img/mh-logo-white.svg" alt="Matthew Hussey logo">
                 </a>
-                <div id="countdown" class="flex-row justify-center items-center is-hidden-for-mobile">
-                    <div class="countdown__wrapper flex-col justify-center items-center">
-                        <p id="days" class="text-4xl">000</p>
-                        <h3 id="dayslabel" class="text-xs text-center">Days</h3>
+                <div id="countdown" class="is-hidden-for-mobile">
+                    <div class="text-center">
+                        <p id="countdown__heading">Countdown to the 2021 Virtual Retreat</p>
                     </div>
-                    <div class="countdown__wrapper flex-col justify-center items-center">
-                        <p id="hours" class="text-4xl">000</p>
-                        <h3 id="hourslabel" class="text-xs text-center">Hours</h3>
-                    </div>
-                    <div class="countdown__wrapper flex-col justify-center items-center">
-                        <p id="minutes" class="text-4xl">000</p>
-                        <h3 id="minuteslabel" class="text-xs text-center">Minutes</h3>
-                    </div>
-                    <div class="countdown__wrapper flex-col justify-center items-center">
-                        <p id="seconds" class="text-4xl">000</p>
-                        <h3 id="secondslabel" class="text-xs text-center">Seconds</h3>
+                    <div class="flex-row justify-center items-center">
+                        <div class="countdown__wrapper flex-col justify-center items-center">
+                            <p id="days" class="text-3xl">000</p>
+                            <h3 id="dayslabel" class="text-xs text-center">Days</h3>
+                        </div>
+                        <div class="countdown__wrapper flex-col justify-center items-center">
+                            <p id="hours" class="text-3xl">000</p>
+                            <h3 id="hourslabel" class="text-xs text-center">Hours</h3>
+                        </div>
+                        <div class="countdown__wrapper flex-col justify-center items-center">
+                            <p id="minutes" class="text-3xl">000</p>
+                            <h3 id="minuteslabel" class="text-xs text-center">Minutes</h3>
+                        </div>
+                        <div class="countdown__wrapper flex-col justify-center items-center">
+                            <p id="seconds" class="text-3xl">000</p>
+                            <h3 id="secondslabel" class="text-xs text-center">Seconds</h3>
+                        </div>
                     </div>
                 </div>
                 <a href="#invest" class="btn is-small is-hidden-for-mobile">Book Now</a>
@@ -144,19 +149,19 @@
                             <li class="checklist__item"><strong>All streamed live to your computer, in the comfort of your home.</strong></li>
                         </ul>
                         <hr/>
-                        <p class="text-center uppercase">As well as:</p>
+                        <h4 class="text-xl text-center uppercase">As well as:</h4>
                         <div id="callout__grid" class="grid-cols-2">
                             <div class="flex-col justify-start items-start">
-                                <ul class="sub-checklist">
-                                    <li class="checklist__item">2 live preparation sessions prior to Sept. 24</li>
-                                    <li class="checklist__item">A very special welcome gift</li>
-                                    <li class="checklist__item">2 weeks of UNLIMITED access to the event recordings</li>
+                                <ul id="sub-checklist__left">
+                                    <li class="sub-checklist__item">2 live preparation sessions prior to Sept. 24</li>
+                                    <li class="sub-checklist__item">A very special welcome gift</li>
+                                    <li class="sub-checklist__item">2 weeks of UNLIMITED access to the event recordings</li>
                                 </ul>
                             </div>
                             <div class="flex-col justify-start items-start">
-                                <ul class="sub-checklist">
-                                    <li class="checklist__item">A comprehensive "Cheat-Sheet" FILLED with notes from the event</li>
-                                    <li class="checklist__item">A private Facebook community where you will meet and keep FRIENDS for life from this experience</li>
+                                <ul id="sub-checklist__right">
+                                    <li class="sub-checklist__item">A comprehensive "Cheat-Sheet" FILLED with notes from the event</li>
+                                    <li class="sub-checklist__item">A private Facebook community where you will meet and keep FRIENDS for life from this experience</li>
                                 </ul>
                             </div>
                         </div>
@@ -362,12 +367,12 @@
                         </div>
                         <div class="embla__btn-wrapper left flex-col justify-center items-center">
                             <button class="embla__prev flex-row justify-center items-center">
-                                <img src="/static/img/arrow-left.svg" alt="Left arrow">
+                                <img src="/static/img/arrow-left.svg" alt="Left arrow" loading="lazy">
                             </button>
                         </div>
                         <div class="embla__btn-wrapper right flex-col justify-center items-center">
                             <button class="embla__next flex-row justify-center items-center">
-                                <img src="/static/img/arrow-right.svg" alt="Right arrow">
+                                <img src="/static/img/arrow-right.svg" alt="Right arrow" loading="lazy">
                             </button>
                         </div>
                     </div>
@@ -465,70 +470,70 @@
                     <div class="faq" x-data="{ open: false }" @click.prevent="open = !open">
                         <div class="flex-row justify-between items-center">
                             <h4>How do I access the Matthew Hussey Virtual Retreat?</h4>
-                            <img src="/static/img/chevron-down.svg" alt="Show answer">
+                            <img src="/static/img/chevron-down.svg" alt="Show answer" loading="lazy">
                         </div>
                         <p class="faq__answer" x-show.transition="open">We’ll be using the platform Hopin for the event. You’ll receive an email with all the instructions to create your free account after confirming your place. All you need to do is join from a compatible browser (Chrome and Firefox work best) and make sure you have a stable internet connection available.</p>
                     </div>
                     <div class="faq" x-data="{ open: false }" @click.prevent="open = !open">
                         <div class="flex-row justify-between items-center">
                             <h4>Can I watch the Virtual Retreat on my phone?</h4>
-                            <img src="/static/img/chevron-down.svg" alt="Show answer">
+                            <img src="/static/img/chevron-down.svg" alt="Show answer" loading="lazy">
                         </div>
                         <p class="faq__answer" x-show.transition="open">If you absolutely have to, then yes the livestream will work just fine on your phone, but we recommend you connect to the largest screen you have available in order to maximise the experience. TV is best, but a laptop or tablet would work great too.</p>
                     </div>
                     <div class="faq" x-data="{ open: false }" @click.prevent="open = !open">
                         <div class="flex-row justify-between items-center">
                             <h4>Is the Matthew Hussey Virtual Retreat recorded?</h4>
-                            <img src="/static/img/chevron-down.svg" alt="Show answer">
+                            <img src="/static/img/chevron-down.svg" alt="Show answer" loading="lazy">
                         </div>
                         <p class="faq__answer" x-show.transition="open">This 3 day event is streamed completely live, however the recordings will be made available for unlimited access for 2 weeks after. This gives you an incredible opportunity to repeat any part of the process, make more extensive notes and ensure you don’t miss a thing.</p>
                     </div>
                     <div class="faq" x-data="{ open: false }" @click.prevent="open = !open">
                         <div class="flex-row justify-between items-center">
                             <h4>Will there be an opportunity to ask questions during the Virtual Retreat?</h4>
-                            <img src="/static/img/chevron-down.svg" alt="Show answer">
+                            <img src="/static/img/chevron-down.svg" alt="Show answer" loading="lazy">
                         </div>
                         <p class="faq__answer" x-show.transition="open">Not only will there be the opportunity to go live during the Q&A within each of the daily sessions, but you’ll also have the opportunity to feed in your questions via the live chat function too.</p>
                     </div>
                     <div class="faq" x-data="{ open: false }" @click.prevent="open = !open">
                         <div class="flex-row justify-between items-center">
                             <h4>Can I interact with the other attendees?</h4>
-                            <img src="/static/img/chevron-down.svg" alt="Show answer">
+                            <img src="/static/img/chevron-down.svg" alt="Show answer" loading="lazy">
                         </div>
                         <p class="faq__answer" x-show.transition="open">Of course. The Matthew Hussey Virtual Retreat brings together extraordinary people from all over the world with a burning desire to transform their lives from the inside out. We encourage you to connect during the program via the live chat function, but you’ll also be invited to join the private Facebook group so that you can stay in touch with your new tribe and support one another in the months that follow.</p>
                     </div>
                     <div class="faq" x-data="{ open: false }" @click.prevent="open = !open">
                         <div class="flex-row justify-between items-center">
                             <h4>Is this a 'hands on' program?</h4>
-                            <img src="/static/img/chevron-down.svg" alt="Show answer">
+                            <img src="/static/img/chevron-down.svg" alt="Show answer" loading="lazy">
                         </div>
                         <p class="faq__answer" x-show.transition="open">Absolutely, this program is designed to guide you through a proven process where you leave having put the work in. This isn’t about sitting back and simply listening, you’ll be actively participating in different journaling exercises, Q&A sessions and powerful visualizations. You’ll not just leave the event with a completely different mindset and confidence, but also an actionable blueprint for the next chapter of your life.</p>
                     </div>
                     <div class="faq" x-data="{ open: false }" @click.prevent="open = !open">
                         <div class="flex-row justify-between items-center">
                             <h4>Who will I be speaking to during my initial consultation?</h4>
-                            <img src="/static/img/chevron-down.svg" alt="Show answer">
+                            <img src="/static/img/chevron-down.svg" alt="Show answer" loading="lazy">
                         </div>
                         <p class="faq__answer" x-show.transition="open">You’ll be speaking with one of my trusted Retreat Specialists. They are Emma, Michael and Lottie. These are some of my most trusted people and I can’t wait for you to speak with them. They’ve been working with me on this process for years and are on hand to hear your story. I promise, whatever the outcome, you’ll take value from the time you spend speaking with them.</p>
                     </div>
                     <div class="faq" x-data="{ open: false }" @click.prevent="open = !open">
                         <div class="flex-row justify-between items-center">
                             <h4>What is the purpose of the call?</h4>
-                            <img src="/static/img/chevron-down.svg" alt="Show answer">
+                            <img src="/static/img/chevron-down.svg" alt="Show answer" loading="lazy">
                         </div>
                         <p class="faq__answer" x-show.transition="open">I’ve spent years refining this process and it’s designed to go deep (often deeper than people are even expecting) into the core of who you truly want to be, which is why I have my team take people through this immersive experience personally. They’ll be able to share more with you about the transformative process, answer your questions and help you decide if the program is a good fit for you.</p>
                     </div>
                     <div class="faq" x-data="{ open: false }" @click.prevent="open = !open">
                         <div class="flex-row justify-between items-center">
                             <h4>What will we be covering during my consultation with a Retreat Specialist?</h4>
-                            <img src="/static/img/chevron-down.svg" alt="Show answer">
+                            <img src="/static/img/chevron-down.svg" alt="Show answer" loading="lazy">
                         </div>
                         <p class="faq__answer" x-show.transition="open">This is so much more than just a consultation, your call with one of my incredible specialist mentors will help you get clarity on your goals, the obstacles you want to overcome, and your direction for your future. This is your chance to open up and fully express your current frustrations and desires for change with my amazing Retreat Team.</p>
                     </div>
                     <div class="faq" x-data="{ open: false }" @click.prevent="open = !open">
                         <div class="flex-row justify-between items-center">
                             <h4>Is my consultation with a Retreat Specialist free?</h4>
-                            <img src="/static/img/chevron-down.svg" alt="Show answer">
+                            <img src="/static/img/chevron-down.svg" alt="Show answer" loading="lazy">
                         </div>
                         <p class="faq__answer" x-show.transition="open">Yes, your consultation with your Retreat Specialist is completely free of charge. Just be sure to enter your timezone and country dialling code correctly when making your appointment. Alternatively they can contact you via Skype or WhatsApp if you’d prefer to use an internet based calling service.</p>
                     </div>
@@ -543,6 +548,7 @@
                     <h2 class="text-center">You can stay where you are, </br> or you can make an investment in yourself</h2>
                     <p class="text-center">Don't wait a moment longer, claim your place on the September <em>Virtual Retreat</em> now and lock in your personal growth for 2021. Not only will we have the most incredible 3 days together, but committing to this now will click you into a different gear psychologically to know that you're carving out time to make yourself a priority.</p>
                 </div>
+                <img src="/static/img/matt_signature.webp" alt="Matthew Hussey's signature" loading="lazy">
                 <div class="flex-row justify-center items-center">
                     <a href="#invest" class="btn is-large">Register now</a>
                 </div>
@@ -554,7 +560,7 @@
             <div class="container">
                 <div class="flex-row justify-between items-center">
                     <a href="/">
-                        <img src="/static/img/mh-logo-white.svg" alt="Matthew Hussey logo">
+                        <img src="/static/img/mh-logo-white.svg" alt="Matthew Hussey logo" loading="lazy">
                     </a>
                     <nav class="flex-row justify-between items-center">
                         <a href="/">Terms & Conditions</a>

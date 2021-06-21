@@ -30,7 +30,7 @@
         background-color: $gray;
         color: rgba($white, 0.8);
 
-        > h3 {
+        > h3, h4 {
             color: $white;
         }
 
@@ -66,39 +66,6 @@
 }
 
 .sub-checklist {
-
-    > li {
-        position: relative;
-
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0.875rem;
-            height: 0.875rem;
-            background-image: url('/static/img/check-icon.svg');
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-        @media(max-width: map-get($breakpoints-down, 'small')) {
-            padding-left: 1.57em;
-        }
-    
-        @media(min-width: map-get($breakpoints-down, 'medium')) {
-            padding-left: 1.75em;
-        }
-    
-        @media(min-width: map-get($breakpoints-down, 'large')) {
-            padding-left: 1.67em;
-        }
-
-    }
-
-}
-
-.sub-checklist {
     padding: 0 1.25rem;
     max-width: 65ch;
     font-size: 0.875rem;
@@ -124,4 +91,36 @@
         font-size: 1.125rem;
         line-height: 1.78;
     }
+}
+
+#sub-checklist__left, #sub-checklist__right {
+
+    li {
+        position: relative;
+        font-size: 0.875rem;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 15%; left: 5%;
+            width: 0.25rem; height: 0.25rem;
+            border-radius: 50%;
+            background-color: rgba($white, 0.8);
+            background-image: none;
+        }
+    
+        @media(max-width: map-get($breakpoints-down, 'small')) {
+            padding-left: 1.57em;
+        }
+    
+        @media(min-width: map-get($breakpoints-down, 'medium')) {
+            padding-left: 1.75em;
+        }
+    
+        @media(min-width: map-get($breakpoints-down, 'large')) {
+            padding-left: 1.67em;
+        }
+
+    }
+
 }

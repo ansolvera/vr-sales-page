@@ -12,10 +12,10 @@ body {
 }
 
 main {
-    margin-top: 6rem;
+    margin-top: 8rem;
 
     @include breakpointsUp(medium) {
-        margin-top: 9rem;
+        margin-top: 11rem;
     }
 
 }

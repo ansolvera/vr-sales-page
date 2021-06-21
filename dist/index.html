@@ -45,19 +45,19 @@
                     </div>
                 </div>
                 <a href="#invest" class="btn is-small is-hidden-for-mobile">Book Now</a>
-            </div>
-        </div>
-        <hr>
-        <div class="container">
-            <nav id="navigation" class="is-hidden-for-mobile">
-                <div class="flex-row justify-center items-center">
-                    <a href="#expect">Why attend?</a>
-                    <a href="#who">Who is this for?</a>
-                    <a href="#lives">The lives we've changed</a>
-                    <a href="#bonus">Special bonuses</a>
-                    <a href="#faq">FAQs</a>
+                <div id="hamburger" class="flex-col justify-center items-center is-hidden-for-desktop">
+                    <img class="hamburger__icon" src="/static/img/menu.svg" alt="Mobile menu icon">
                 </div>
-            </nav>
+            </div>
+            <div id="header__bottom" class="is-hidden-for-mobile">
+                <nav id="navigation" class="flex-row justify-center items-center">              
+                    <a href="#expect" class="navigation__link">Why attend?</a>
+                    <a href="#who" class="navigation__link">Who is this for?</a>
+                    <a href="#lives" class="navigation__link">The lives we've changed</a>
+                    <a href="#bonus" class="navigation__link">Special bonuses</a>
+                    <a href="#faq" class="navigation__link">FAQs</a>
+                </nav>
+            </div>
         </div>
     </header>
 
@@ -96,8 +96,8 @@
         <section id="transform" class="section is-gray py-120">
             <div class="container">
                 <article class="prose">
-                    <h2 class="text-center mb-80">Transform your life and </br> claim your happiness <span class="gold-text">now</span></h2>
-                    <div class="grid-cols-2 gap-64 mb-80">
+                    <h2 class="text-center mb-80">Transform your life and claim your happiness <span class="gold-text">now</span></h2>
+                    <div id="transform__intro" class="grid-cols-2 gap-64">
                         <div class="flex-col justify-center items-center">
                             <div id="polaroid">
                                 <img src="/static/img/matt_transform.webp" alt="A photograph of Matthew Hussey sitting outside" loading="lazy">
@@ -117,7 +117,7 @@
                         <p>I’ll take you through the life-changing process LIVE online, alongside my team and an incredible tribe who are on the same journey, there to support you every step of the way.</p>
                     </div>
                     <div class="callout is-white my-80">
-                        <h3 class="text-center mb-40">Begin creating the life </br> you want, starting today</h3>
+                        <h3 class="text-center mb-20">Begin creating the life you want, starting today</h3>
                         <p class="text-center">Just like it has for so many people like you, the <em>Matthew Hussey Virtual Retreat</em> can help you now, more than ever to...</p>
                         <hr/>
                         <ul class="checklist">
@@ -131,8 +131,8 @@
                         </ul>
                     </div>
                     <div class="callout is-dark mb-80">
-                        <h3 class="text-center mb-40">Over the course of 3 immersive days together, you'll experience:</h3>
-                        <p class="text-center mb-40">Just like it has for so many people like you, the <em>Matthew Hussey Virtual Retreat</em> can help you now, more than ever to...</p>
+                        <h3 class="text-center mb-20">Over the course of 3 immersive days together, you'll experience:</h3>
+                        <p class="text-center">Just like it has for so many people like you, the <em>Matthew Hussey Virtual Retreat</em> can help you now, more than ever to...</p>
                         <hr/>
                         <ul class="checklist">
                             <li class="checklist__item"><strong>Daily LIVE coaching</strong> with me and my dad, Steve</li>
@@ -145,7 +145,7 @@
                         </ul>
                         <hr/>
                         <p class="text-center uppercase">As well as:</p>
-                        <div class="grid-cols-2 gap-32">
+                        <div id="callout__grid" class="grid-cols-2">
                             <div class="flex-col justify-start items-start">
                                 <ul class="sub-checklist">
                                     <li class="checklist__item">2 live preparation sessions prior to Sept. 24</li>
@@ -221,7 +221,7 @@
                         </ol>
                     </div>
                     <div class="callout is-beige my-80">
-                        <h3 class="text-center mb-40">Here are the strategies we'll use to get you there:</h3>
+                        <h3 class="text-center">Here are the strategies we'll use to get you there:</h3>
                         <hr/>
                         <ul class="checklist">
                             <li class="checklist__item">We'll look at your long-held (and outdated) limiting beliefs about your identity and help you <strong>define who you want to be, starting NOW.</strong></li>
@@ -322,7 +322,7 @@
         <!-- THE LIVES WE'VE CHANGED -->
         <section id="lives" class="section py-120">
             <div class="container">
-                <article class="prose">
+                <article class="prose mb-40">
                     <div class="prose__content">
                         <h2 class="text-center">The Lives We've Changed</h2>
                         <p class="text-center">The feedback from our last two Virtual Retreat’s has been nothing short of incredible. Hear what some of our recent graduates are saying about the program.</p>

@@ -1,0 +1,45 @@
+// ********************
+// GRID
+// ********************
+
+// GRID COLUMNS
+.grid-cols-2 {
+    @include gridRows(2);
+
+    @include breakpointsUp(medium) {
+        grid-template-rows: none;
+        @include gridColumns(2);
+    }
+
+}
+
+.grid-cols-3 {
+    @include gridRows(3);
+
+    @include breakpointsUp(medium) {
+        grid-template-rows: none;
+        @include gridColumns(3);
+    }
+}
+
+// GRID ROWS
+.grid-rows-2 {
+    @include gridRows(2);
+}
+
+.grid-rows-3 {
+    @include gridRows(3);
+}
+
+// GRID GAP
+.gap-16 {
+    gap: 1rem;
+}
+
+.gap-32 {
+    gap: 2rem;
+}
+
+.gap-64 {
+    gap: 4rem;
+}

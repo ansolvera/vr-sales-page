@@ -1,0 +1,70 @@
+header {
+    position: fixed;
+    z-index: 999;
+    top: 0; right: 0; left: 0;
+    background-color: $gray;
+}
+
+#header__top {
+    height: 6rem;
+}
+
+#header__bottom {
+    position: relative;
+    height: 3rem;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: -100vw; right: 0;
+        width: 200vw; height: 1px;
+        background-color: rgba($white, 0.5);
+    }
+
+}
+
+nav {
+    height: 100%;
+}
+
+.navigation__link {
+    opacity: 0.5;
+    margin: 0 2.5rem;
+    transition: opacity 0.3s ease-in-out;
+    font-size: 0.875rem;
+    line-height: 1;
+    text-align: center;
+    color: $white;
+
+    &:hover {
+        opacity: 1.0;
+    }
+
+}
+
+#header__brand {
+
+    > img {
+        width: auto;
+        height: 3.75rem;
+    }
+
+}
+
+#hamburger {
+    width: 3rem;;
+    height: 100%;
+    cursor: pointer;
+}
+
+.hamburger__icon {
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out;
+    width: 2.5rem;
+    height: 2.5rem;
+
+    &:hover {
+        opacity: 1.0;
+    }
+
+}

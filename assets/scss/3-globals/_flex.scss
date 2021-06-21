@@ -1,0 +1,116 @@
+// ********************
+// FLEXBOX
+// ********************
+
+// FLEX ROW CLASSES
+.flex-row {
+
+    display: flex;
+    flex-direction: row;
+
+    &.justify-start {
+        @include flex(flex-start, null)
+    }
+
+    &.justify-end {
+        @include flex(flex-end, null)
+    }
+
+    &.justify-center {
+        @include flex(center, null)
+    }
+
+    &.justify-between {
+        @include flex(space-between, null)
+    }
+
+    &.justify-around {
+        @include flex(space-around, null)
+    }
+
+    &.justify-evenly {
+        @include flex(space-evenly, null)
+    }
+
+    &.items-start {
+        @include flex(null, flex-start)
+    }
+
+    &.items-end {
+        @include flex(null, flex-end)
+    }
+
+    &.items-center {
+        @include flex(null, center)
+    }
+
+    &.items-baseline {
+        @include flex(null, baseline)
+    }
+
+    &.items-stretch {
+        @include flex(null, stretch)
+    }
+
+}
+
+// FLEX COLUMN CLASSES
+.flex-col {
+    
+    display: flex;
+    flex-direction: column;
+
+    &.justify-start {
+        @include flex(null, flex-start)
+    }
+
+    &.justify-end {
+        @include flex(null, flex-end)
+    }
+
+    &.justify-center {
+        @include flex(null, center)
+    }
+
+    &.justify-between {
+        @include flex(null, space-between)
+    }
+
+    &.justify-around {
+        @include flex(null, space-around)
+    }
+
+    &.justify-evenly {
+        @include flex(null, space-evenly)
+    }
+
+    &.items-start {
+        @include flex(flex-start, null)
+    }
+
+    &.items-end {
+        @include flex(flex-end, null)
+    }
+
+    &.items-center {
+        @include flex(center, null)
+    }
+
+    &.items-baseline {
+        @include flex(baseline, null)
+    }
+
+    &.items-stretch {
+        @include flex(stretch, null)
+    }
+
+}
+
+// FLEX UTILITIES
+.wrap {
+    flex-wrap: wrap;
+}
+
+.no-wrap {
+    flex-wrap: nowrap;
+}

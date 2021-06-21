@@ -1,0 +1,323 @@
+a[data-hs-anchor="true"] {   
+    display: block; 
+    position: relative; 
+    visibility: hidden; 
+
+    @media(max-width: map-get($breakpoints-down, 'small')) {
+        top: -108px;
+    }
+
+    @media(min-width: map-get($breakpoints-up, 'large')) {
+        top: -157px;
+    }
+
+   }
+
+
+// ********************
+// HERO SECTION
+// ********************
+
+#hero__video {
+    --video-width: 100vw;
+
+    width: var(--video-width);
+    height: calc(0.5625 * var(--video-width));
+}
+
+#hero__video-wrapper {
+    position: relative;
+    z-index: 900;
+
+    > div:first-of-type {
+        position: absolute;
+        top: -1px;
+        right: 0;
+        left: 0;
+    }
+}
+
+#ribbon {
+    padding: 0 1.5rem;
+    width: 35.625rem;
+    height: 2.5rem;
+    background-color: #CE0000;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+
+    p {
+        color: $white;
+    }
+
+}
+
+#close {
+    cursor: pointer;
+}
+
+// ********************
+// PROOF SECTION
+// ********************
+
+#proof {
+
+    img {
+        margin: 2.5rem 1.25rem;
+        height: 2.5rem;
+    }
+
+}
+
+// ********************
+// TRANSFORM SECTION
+// ********************
+
+#transform__intro {
+
+    margin-bottom: 1.25rem;
+
+    @include breakpointsUp(medium) {
+        margin-bottom: 5rem;
+    }
+
+}
+
+// ********************
+// LEVEL UP SECTION
+// ********************
+
+#level__overlay {
+    position: absolute;
+    z-index: 50;
+    top: 0; right: 0; bottom: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: linear-gradient(to right, rgba($gray, 0), rgba($gray, 1.0) 45vw);
+    backdrop-filter: brightness(80%) saturate(80%);
+}
+
+#level {
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-image: url('/static/img/matt_level.webp');
+        background-repeat: no-repeat;
+        background-size: auto 125%;
+        background-position: -10vw -5vw;
+    }
+
+}
+
+#polaroid {
+    padding-top: 0.875rem;
+    padding-right: 0.875rem;
+    padding-bottom: 3.5rem;
+    padding-left: 0.875rem;
+    background-color: $white;
+    box-shadow: 0px 10px 15px -3px rgba($color: #000000, $alpha: 0.1), 0px 2px 4px -1px rgba($color: #000000, $alpha: 0.06);
+    transform: rotateZ(-5deg);
+
+    img {
+        width: 12.5rem;
+        height: auto;
+    }
+
+}
+
+// ********************
+// WHO SECTION
+// ********************
+
+.tab {
+    position: relative;
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 0.25rem;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba($gray, 0.05);
+    }
+
+    &.is-active {
+        background-color: $white;
+        box-shadow: 0px 20px 25px -5px rgba($color: #000000, $alpha: 0.1), 0px 10px 10px -5px rgba($color: #000000, $alpha: 0.04);
+
+        &:after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            width: 0;
+            height: 0;
+            border: 1rem solid transparent;
+            border-left-color: $white;
+            border-right: 0;
+            margin-top: -1rem;
+            margin-right: -1rem;
+        }
+
+    }
+
+    h3 {
+        font-weight: 700;
+    }
+
+}
+
+.tab__content {
+    padding: 2.5rem;
+    border: 2px dashed $gold;
+    border-radius: 0.5rem;
+    background-color: $white;
+    box-shadow: 0px 20px 25px -5px rgba($color: #000000, $alpha: 0.1), 0px 10px 10px -5px rgba($color: #000000, $alpha: 0.04);
+}
+
+// ********************
+// READY SECTION
+// ********************
+
+#ready {
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-image: url(/static/img/matt_ready.webp);
+        background-repeat: no-repeat;
+        background-size: auto 200%;
+        background-position: center;
+    }
+}
+
+#ready__overlay {
+    position: absolute;
+    z-index: 50;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, rgba($gray, 1.0) 30%, rgba($gray, 0.5) 50%, rgba($gray, 1.0) 70%);
+    backdrop-filter: brightness(60%) saturate(60%);
+}
+
+.cta {
+    padding: 2.5rem;
+    background-color: rgba($white, 0.1);
+    border: 2px dashed $gold;
+    border-radius: 0.5rem;
+
+    h3 {
+        color: $white;
+    }
+
+}
+
+// ********************
+// INVEST SECTION
+// ********************
+
+#invest {
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-image: url('/static/img/matt_invest.webp');
+        background-repeat: no-repeat;
+        background-size: auto 125%;
+        background-position: right 0 bottom 0;
+    }
+
+}
+
+
+
+#invest__overlay {
+    position: absolute;
+    z-index: 50;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, rgba($gray, 1.0) 50%, rgba($gray, 0));
+    backdrop-filter: brightness(80%) saturate(80%);
+}
+
+// ********************
+// FAQ SECTION
+// ********************
+
+.faq {
+    cursor: pointer;
+    width: 100%;
+
+    > div {
+        width: 100%;
+        padding: 1.5rem;
+        border-bottom: 1px solid rgba($gray, 0.05);
+        transition: color ease-in-out 0.3s;
+
+        &:hover h4 {
+            color: $gold;
+        }
+
+    }
+
+    h4 {
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
+
+    p {
+        padding: 1.25rem;
+        background-color: rgba($gray, 0.05);
+    }
+
+    img {
+        width: 2rem;
+        height: 2rem;
+    }
+
+}
+
+// ********************
+// FINAL SECTION
+// ********************
+
+#final {
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-image: url('/static/img/matt_final.webp');
+        background-repeat: no-repeat;
+        background-size: auto 125%;
+        background-position: left -5vw bottom -5vw;
+    }
+
+}
+
+#final__overlay {
+    position: absolute;
+    z-index: 50;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, rgba($gray, 0), rgba($gray, 1.0) 40%);
+    backdrop-filter: brightness(80%) saturate(80%);
+}

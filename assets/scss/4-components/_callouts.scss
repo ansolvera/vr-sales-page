@@ -1,0 +1,127 @@
+// ********************
+// CALLOUTS
+// ********************
+
+.callout {
+
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 48.125rem;
+    padding: 2.5rem;
+    border-radius: 0.75rem;
+
+    @include breakpointsUp(medium) {
+        padding: 5rem;
+    }
+
+    hr {
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
+        border-color: $gray;
+        opacity: 0.1;
+    }
+
+    &.is-white {
+        background-color: $white;
+        border: 2px dashed $gold;
+    }
+
+    &.is-dark {
+        background-color: $gray;
+        color: rgba($white, 0.8);
+
+        > h3 {
+            color: $white;
+        }
+
+        strong {
+            color: rgba($white, 1.0);
+        }
+
+        hr {
+            border-color: $white;
+            opacity: 0.1;
+        }
+
+    }
+
+    &.is-beige {
+        background-color: rgba($beige, 0.5);
+    }
+
+    &.is-transparent {
+        background-color: rgba($gray, 0.5);
+        border: 2px dashed rgba($beige, 0.7);
+    }
+
+}
+
+.callout__grid {
+    grid-gap: 1.25rem;
+
+    @include breakpointsUp(medium) {
+        grid-gap: 2rem;
+    }
+
+}
+
+.sub-checklist {
+
+    > li {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0.875rem;
+            height: 0.875rem;
+            background-image: url('/static/img/check-icon.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        @media(max-width: map-get($breakpoints-down, 'small')) {
+            padding-left: 1.57em;
+        }
+    
+        @media(min-width: map-get($breakpoints-down, 'medium')) {
+            padding-left: 1.75em;
+        }
+    
+        @media(min-width: map-get($breakpoints-down, 'large')) {
+            padding-left: 1.67em;
+        }
+
+    }
+
+}
+
+.sub-checklist {
+    padding: 0 1.25rem;
+    max-width: 65ch;
+    font-size: 0.875rem;
+    line-height: 1.71;
+    color: rgba($white, 0.5);
+
+    @media(max-width: map-get($breakpoints-down, 'small')) {
+        font-size: 0.75rem;
+        line-height: 1.67;
+    }
+    
+    @media(min-width: map-get($breakpoints-down, 'medium')) {
+        font-size: 0.875rem;
+        line-height: 1.71;
+    }
+    
+    @media(min-width: map-get($breakpoints-down, 'large')) {
+        font-size: 1rem;
+        line-height: 1.75;
+    }
+    
+    @media(min-width: map-get($breakpoints-down, 'xl')) {
+        font-size: 1.125rem;
+        line-height: 1.78;
+    }
+}

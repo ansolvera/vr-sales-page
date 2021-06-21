@@ -1,0 +1,20 @@
+// ********************
+// BREAKPOINTS
+// ********************
+
+// DEFINE BREAKPOINT MAPS
+$breakpoints-up: (
+    "small": 40rem, // 640px
+    "medium": 48rem, // 768px
+    "large": 64rem, // 1024px
+    "xl": 80rem, // 1280px
+    "2xl": 96rem, // 1536px
+);
+
+$breakpoints-down: (
+    "small": 40rem - 0.0625rem, // 639px
+    "medium": 48rem - 0.0625rem, // 767px
+    "large": 64rem - 0.0625rem, // 1023px
+    "xl": 80rem - 0.0625rem, // 1279px
+    "2xl": 96rem - 0.0625rem, // 1535px
+);

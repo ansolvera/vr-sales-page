@@ -1,0 +1,64 @@
+// ********************
+// CAROUSEL
+// ********************
+
+.embla {
+    overflow: hidden;
+}
+
+.embla__viewport {
+    position: relative;
+}
+
+.embla__container {
+    display: flex;
+}
+
+.embla__slide {
+    margin: 0 1.25rem;
+    padding: 1.25rem 0;
+    position: relative;
+
+    @include breakpointsDown(medium) {
+        flex: 0 0 100%;
+    }
+
+    @include breakpointsUp(medium) {
+        flex: 0 0 50%;
+    }
+
+    > p {
+        padding: 2.5rem 5rem;
+        opacity: 0.6;
+    }
+
+}
+
+.embla__btn-wrapper {
+    position: absolute;
+    top: 0;
+    height: 100%;
+
+    &.left {
+        left: 0;
+    }
+
+    &.right {
+        right: 0;
+    }
+
+}
+
+.embla__prev, .embla__next {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    box-shadow: 0px 1px 3px 0px rgba($color: #000000, $alpha: 0.1), 0px 1px 2px 0px rgba($color: #000000, $alpha: 0.06);
+}
+
+.thumbnail {
+    width: 40rem;
+    height: 22.5rem;
+    border-radius: 4px solid $white;
+    box-shadow: 0px 20px 25px -5px rgba($color: #000000, $alpha: 0.1), 0px 10px 10px -5px rgba($color: #000000, $alpha: 0.04);
+}

@@ -49,7 +49,7 @@ close.addEventListener('click', () => {
 
 let emblaNode = document.querySelector('.embla');
 let viewportNode = document.querySelector('.embla__viewport');
-let options = { loop: false };
+let options = { loop: true };
 let embla = EmblaCarousel(viewportNode, options);
 
 let prevButtonNode = document.querySelector('.embla__prev');

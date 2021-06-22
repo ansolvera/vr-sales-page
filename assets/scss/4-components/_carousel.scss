@@ -4,10 +4,22 @@
 
 .embla {
     overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: 200;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-image: linear-gradient(to right, rgba($white, 1.0) 2%, rgba($white, 0) 50%, rgba($white, 1.0) 98%);
+        pointer-events: none;
+    }
+
 }
 
 .embla__viewport {
     position: relative;
+    pointer-events: auto;
 }
 
 .embla__container {
@@ -36,29 +48,31 @@
 
 .embla__btn-wrapper {
     position: absolute;
+    z-index: 300;
     top: 0;
     height: 100%;
 
     &.left {
-        left: 0;
+        left: 1.25rem;
     }
 
     &.right {
-        right: 0;
+        right: 1.25rem;
     }
 
 }
 
 .embla__prev, .embla__next {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3rem;
+    height: 3rem;
     border-radius: 50%;
     box-shadow: 0px 1px 3px 0px rgba($color: #000000, $alpha: 0.1), 0px 1px 2px 0px rgba($color: #000000, $alpha: 0.06);
+    background-color: $white;
 }
 
 .thumbnail {
     width: 40rem;
-    height: 22.5rem;
-    border-radius: 4px solid $white;
+    height: auto;
+    border: 0.5rem solid $white;
     box-shadow: 0px 20px 25px -5px rgba($color: #000000, $alpha: 0.1), 0px 10px 10px -5px rgba($color: #000000, $alpha: 0.04);
 }

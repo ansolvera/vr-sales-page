@@ -97,30 +97,33 @@
 
     li {
         position: relative;
+        padding-left: 0.75rem;
         font-size: 0.875rem;
 
         &::before {
             content: '';
             position: absolute;
-            top: 15%; left: 5%;
+            top: 0.5rem; left: 0;
             width: 0.25rem; height: 0.25rem;
             border-radius: 50%;
             background-color: rgba($white, 0.8);
             background-image: none;
         }
-    
-        @media(max-width: map-get($breakpoints-down, 'small')) {
-            padding-left: 1.57em;
-        }
-    
-        @media(min-width: map-get($breakpoints-down, 'medium')) {
-            padding-left: 1.75em;
-        }
-    
-        @media(min-width: map-get($breakpoints-down, 'large')) {
-            padding-left: 1.67em;
-        }
 
     }
 
+}
+
+#sub-checklist__left {
+
+    @include breakpointsUp(medium) {
+        padding-right: 1rem;
+    }
+}
+
+#sub-checklist__right {
+
+    @include breakpointsUp(medium) {
+        padding-left: 1rem;
+    }
 }

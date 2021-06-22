@@ -3,15 +3,14 @@ a[data-hs-anchor="true"] {
     position: relative; 
     visibility: hidden; 
 
-    @media(max-width: map-get($breakpoints-down, 'small')) {
-        top: -108px;
+    @include breakpointsDown(medium) {
+        top: 8rem;
     }
 
-    @media(min-width: map-get($breakpoints-up, 'large')) {
-        top: -157px;
+    @include breakpointsUp(medium) {
+        top: 11rem;
     }
-
-   }
+}
 
 
 // ********************
@@ -117,8 +116,16 @@ a[data-hs-anchor="true"] {
     z-index: 50;
     top: 0; right: 0; bottom: 0; left: 0;
     width: 100%; height: 100%;
-    background-image: linear-gradient(to right, rgba($gray, 0), rgba($gray, 1.0) 45vw);
     backdrop-filter: brightness(80%) saturate(80%);
+
+    @include breakpointsDown(small) {
+        background-color: rgba($gray, 0.85);
+    }
+
+    @include breakpointsUp(small) {
+        background-color: rgba($gray, 0);
+        background-image: linear-gradient(to right, rgba($gray, 0), rgba($gray, 1.0) 55%);
+    }
 }
 
 #level {
@@ -338,8 +345,17 @@ a[data-hs-anchor="true"] {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to right, rgba($gray, 1.0) 50%, rgba($gray, 0));
     backdrop-filter: brightness(70%) saturate(70%);
+
+    @include breakpointsDown(small) {
+        background-color: rgba($gray, 0.85);
+    }
+
+    @include breakpointsUp(small) {
+        background-color: rgba($gray, 0);
+        background-image: linear-gradient(to right, rgba($gray, 1.0) 50%, rgba($gray, 0));
+    }
+
 }
 
 // ********************
@@ -363,7 +379,9 @@ a[data-hs-anchor="true"] {
     }
 
     h4 {
+        padding-right: 2rem;
         font-size: 1.25rem;
+        line-height: 1.125;
         font-weight: 500;
     }
 
@@ -450,6 +468,14 @@ a[data-hs-anchor="true"] {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to right, rgba($gray, 0), rgba($gray, 1.0) 40%);
     backdrop-filter: brightness(80%) saturate(80%);
+
+    @include breakpointsDown(small) {
+        background-color: rgba($gray, 0.85);
+    }
+
+    @include breakpointsUp(small) {
+        background-color: rgba($gray, 0);
+        background-image: linear-gradient(to right, rgba($gray, 0), rgba($gray, 1.0) 45%);
+    }
 }

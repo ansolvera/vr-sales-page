@@ -252,7 +252,7 @@ h4 {
         &::before {
             content: '';
             position: absolute;
-            top: 0;
+            top: 0.125rem;
             left: 0;
             width: 1rem;
             height: 1rem;
@@ -260,33 +260,66 @@ h4 {
             background-repeat: no-repeat;
             background-size: cover;
 
+            // Below 639px;
             @media(max-width: map-get($breakpoints-down, 'small')) {
-                width: 1rem;
-                height: 1rem;
+                width: 1rem; height: 1rem;
             }
-        
-            @media(min-width: map-get($breakpoints-down, 'medium')) {
-                width: 1.5rem;
-                height: 1.5rem;
+            
+            // From 640px to 767px;
+            @media(min-width: map-get($breakpoints-up, 'small')) and (max-width: map-get($breakpoints-down, 'medium')) {
+                width: 1rem; height: 1rem;
             }
-        
-            @media(min-width: map-get($breakpoints-down, 'large')) {
-                width: 2rem;
-                height: 2rem;
+
+            // From 768px to 1023px;
+            @media(min-width: map-get($breakpoints-up, 'medium')) and (max-width: map-get($breakpoints-down, 'large')) {
+                width: 1.5rem; height: 1.5rem;
+            }
+
+            // From 1024px to 1279px;
+            @media(min-width: map-get($breakpoints-up, 'large')) and (max-width: map-get($breakpoints-down, 'xl')) {
+                width: 1.5rem; height: 1.5rem;
+            }
+
+            // From 1280px to 1535px;
+            @media(min-width: map-get($breakpoints-up, 'xl')) and (max-width: map-get($breakpoints-down, '2xl')) {
+                width: 2rem; height: 2rem;
+            }
+
+            // Above 1535px
+            @media(min-width: map-get($breakpoints-up, '2xl')) {
+                width: 2rem; height: 2rem;
             }
 
         }
 
+        // Below 639px;
         @media(max-width: map-get($breakpoints-down, 'small')) {
-            padding-left: 1.57em;
+            padding-left: 1.5rem;
         }
-    
-        @media(min-width: map-get($breakpoints-down, 'medium')) {
-            padding-left: 1.75em;
+        
+        // From 640px to 767px;
+        @media(min-width: map-get($breakpoints-up, 'small')) and (max-width: map-get($breakpoints-down, 'medium')) {
+            padding-left: 1.5rem;
         }
-    
-        @media(min-width: map-get($breakpoints-down, 'large')) {
-            padding-left: 1.67em;
+
+        // From 768px to 1023px;
+        @media(min-width: map-get($breakpoints-up, 'medium')) and (max-width: map-get($breakpoints-down, 'large')) {
+            padding-left: 2.0rem;
+        }
+
+        // From 1024px to 1279px;
+        @media(min-width: map-get($breakpoints-up, 'large')) and (max-width: map-get($breakpoints-down, 'xl')) {
+            padding-left: 2.0rem;
+        }
+
+        // From 1280px to 1535px;
+        @media(min-width: map-get($breakpoints-up, 'xl')) and (max-width: map-get($breakpoints-down, '2xl')) {
+            padding-left: 2.5rem;
+        }
+
+        // Above 1535px
+        @media(min-width: map-get($breakpoints-up, '2xl')) {
+            padding-left: 2.5rem;
         }
 
     }

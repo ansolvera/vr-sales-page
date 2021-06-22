@@ -52,7 +52,8 @@
                 <a href="#invest" class="btn is-small is-hidden-for-mobile">Book Now</a>
                 <div id="hamburger" class="is-hidden-for-desktop" x-data="{ open: false }">
                     <div id="hamburger__icon" class="flex-col justify-center items-center" @click="open = true">
-                        <img src="/static/img/menu.svg" alt="Mobile menu icon">
+                        <img src="/static/img/menu.svg" alt="Mobile menu icon" x-show="!open">
+                        <img src="/static/img/x-icon.svg" alt="Close icon" x-show="open">
                     </div>
                     <nav id="hamburger__menu" class="flex-col justify-start items-stretch" x-show="open" @click.away="open = false">
                         <a href="#expect" class="hamburger__link" @click="open = false">Why attend?</a>

@@ -1,3 +1,7 @@
+// ********************
+// HEADER
+// ********************
+
 header {
     position: fixed;
     z-index: 999;
@@ -7,6 +11,15 @@ header {
 
 #header__top {
     height: 8rem;
+}
+
+#header__brand {
+
+    > img {
+        width: auto;
+        height: 3.75rem;
+    }
+
 }
 
 #header__bottom {
@@ -23,8 +36,24 @@ header {
 
 }
 
+// ********************
+// DESKTOP NAV
+// ********************
+
 nav {
     height: 100%;
+}
+
+#navigation {
+
+    @include breakpointsDown(large) {
+        justify-content: space-between;
+
+        > a {
+            margin: 0 0.5rem;
+        }
+
+    }
 }
 
 .navigation__link {
@@ -42,22 +71,17 @@ nav {
 
 }
 
-#header__brand {
+// ********************
+// MOBILE NAV
+// ********************
 
-    > img {
-        width: auto;
-        height: 3.75rem;
-    }
-
-}
-
-#hamburger {
+#hamburger__icon {
     width: 3rem;;
     height: 100%;
     cursor: pointer;
 }
 
-.hamburger__icon {
+#hamburger__icon > img {
     opacity: 0.8;
     transition: opacity 0.3s ease-in-out;
     width: 2.5rem;
@@ -66,5 +90,30 @@ nav {
     &:hover {
         opacity: 1.0;
     }
+}
 
+#hamburger__menu {
+    position: fixed;
+    top: 8rem; right: 0; bottom: 0; left: 0;
+    width: 100vw; height: calc(100vh - 8rem);
+    background-color: rgba($gray, 0.98);
+    backdrop-filter: blur(4px) saturate(110%);
+}
+
+.hamburger__link {
+    opacity: 0.5;
+    padding: 2.5rem;
+    transition: opacity 0.3s ease-in-out;
+    font-size: 1.25rem;
+    line-height: 1;
+    color: rgba($white, 0.95);
+
+    &:hover {
+        opacity: 1.0;
+    }
+}
+
+#hamburger__cta {
+    margin-top: 2.5rem;
+    margin-left: 2.5rem;
 }

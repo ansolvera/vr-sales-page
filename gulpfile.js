@@ -7,6 +7,7 @@ const browsersync = require('browser-sync').create();
 const autoprefixer = require('autoprefixer');
 const markdown = require('gulp-markdown');
 const fileinclude = require('gulp-file-include');
+const csspurge = require('gulp-css-purge');
 
 // PROCESS MARKDOWN
 function mdTask() {
@@ -25,11 +26,12 @@ function fileInclude() {
         .pipe(dest('dist'));
 }
 
-// COMPILE, PREFIX + MINIFY CSS, OUTPUT TO DIST
+// COMPILE, PREFIX, MINIFY + PURGE CSS, OUTPUT TO DIST
 function scssTask() {
     let plugins = [
+        autoprefixer({ cascade: false }),
         cssnano,
-        autoprefixer({ cascade: false })
+        csspurge
     ];
     return src('assets/scss/main.scss', { sourcemaps: true })
         .pipe(sass())
@@ -69,12 +71,6 @@ exports.default = series(
     browsersyncServe,
     watchTask
     );
-
-// GULP BUILD TASK
-exports.build = series(
-    scssTask,
-    jsTask
-);
 
 // WATCH TASK
 function watchTask() {

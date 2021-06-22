@@ -1,14 +1,38 @@
 footer {
     background: $dark-gray;
+}
 
-    nav {
-        font-size: 0.875rem;
-        color: rgba($white, 0.5);
+#footer__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-        a, p {
-            margin: 0 2.5rem;
+    > a{
+        margin-bottom: 1.25rem;
+    }
+
+    @include breakpointsUp(medium) {
+        flex-direction: row;
+        justify-content: space-between;
+
+        > a {
+            margin-bottom: 0;
         }
 
     }
 
+}
+
+#footer__navigation {
+    font-size: 0.875rem;
+    color: rgba($white, 0.5);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    a, p {
+         padding: 1.25rem;
+    }
 }

@@ -9,6 +9,12 @@
     }
 }
 
+.is-hidden-for-small-screens {
+    @include breakpointsDown(large) {
+        display: none;
+    }
+}
+
 .is-hidden-for-desktop {
     @include breakpointsUp(medium) {
         display: none;

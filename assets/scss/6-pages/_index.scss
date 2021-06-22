@@ -77,7 +77,33 @@ a[data-hs-anchor="true"] {
     margin-bottom: 1.25rem;
 
     @include breakpointsUp(medium) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
         margin-bottom: 5rem;
+
+        > div {
+            max-width: 50%;
+        }
+
+    }
+
+}
+
+#transform__intro__left {
+    padding-bottom: 1.25rem;
+
+    @include breakpointsUp(medium) {
+        padding-right: 1.5rem;
+    }
+
+}
+
+#transform__intro__right {
+
+    @include breakpointsUp(medium) {
+        padding-left: 1.5rem;
     }
 
 }
@@ -105,7 +131,37 @@ a[data-hs-anchor="true"] {
         background-image: url('/static/img/matt_level.webp');
         background-repeat: no-repeat;
         background-size: auto 125%;
-        background-position: -10vw -5vw;
+
+        // Below 639px;
+        @media(max-width: map-get($breakpoints-down, 'small')) {
+            background-position: -200vw -5vw
+        }
+        
+        // From 640px to 767px;
+        @media(min-width: map-get($breakpoints-up, 'small')) and (max-width: map-get($breakpoints-down, 'medium')) {
+            background-position: -180vw -5vw
+        }
+
+        // From 768px to 1023px;
+        @media(min-width: map-get($breakpoints-up, 'medium')) and (max-width: map-get($breakpoints-down, 'large')) {
+            background-position: -95vw -5vw
+        }
+
+        // From 1024px to 1279px;
+        @media(min-width: map-get($breakpoints-up, 'large')) and (max-width: map-get($breakpoints-down, 'xl')) {
+            background-position: -60vw -5vw
+        }
+
+        // From 1280px to 1535px;
+        @media(min-width: map-get($breakpoints-up, 'xl')) and (max-width: map-get($breakpoints-down, '2xl')) {
+            background-position: -35vw -5vw;
+        }
+
+        // Above 1535px
+        @media(min-width: map-get($breakpoints-up, '2xl')) {
+            background-position: -10vw -5vw;
+        }
+
     }
 
 }
@@ -145,7 +201,17 @@ a[data-hs-anchor="true"] {
     &.is-active {
         background-color: $white;
         box-shadow: 0px 20px 25px -5px rgba($color: #000000, $alpha: 0.1), 0px 10px 10px -5px rgba($color: #000000, $alpha: 0.04);
+    }
 
+    h3 {
+        font-weight: 700;
+    }
+
+}
+
+.is-active {
+
+    @include breakpointsUp(medium) {
         &:after {
             content: '';
             position: absolute;
@@ -159,11 +225,6 @@ a[data-hs-anchor="true"] {
             margin-top: -1rem;
             margin-right: -1rem;
         }
-
-    }
-
-    h3 {
-        font-weight: 700;
     }
 
 }
@@ -192,6 +253,7 @@ a[data-hs-anchor="true"] {
         background-size: auto 200%;
         background-position: center;
     }
+
 }
 
 #ready__overlay {
@@ -203,7 +265,7 @@ a[data-hs-anchor="true"] {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to right, rgba($gray, 1.0) 30%, rgba($gray, 0.5) 50%, rgba($gray, 1.0) 70%);
+    background-image: linear-gradient(to right, rgba($gray, 1.0) 25%, rgba($gray, 0.5) 50%, rgba($gray, 1.0) 75%);
     backdrop-filter: brightness(60%) saturate(60%);
 }
 
@@ -233,12 +295,39 @@ a[data-hs-anchor="true"] {
         background-image: url('/static/img/matt_invest.webp');
         background-repeat: no-repeat;
         background-size: auto 125%;
-        background-position: right 0 bottom 0;
+
+        // Below 639px;
+        @media(max-width: map-get($breakpoints-down, 'small')) {
+            background-position: right -110vw bottom 0;
+        }
+        
+        // From 640px to 767px;
+        @media(min-width: map-get($breakpoints-up, 'small')) and (max-width: map-get($breakpoints-down, 'medium')) {
+            background-position: right -90vw bottom 0;
+        }
+
+        // From 768px to 1023px;
+        @media(min-width: map-get($breakpoints-up, 'medium')) and (max-width: map-get($breakpoints-down, 'large')) {
+            background-position: right -70vw bottom 0;
+        }
+
+        // From 1024px to 1279px;
+        @media(min-width: map-get($breakpoints-up, 'large')) and (max-width: map-get($breakpoints-down, 'xl')) {
+            background-position: right -50vw bottom 0;
+        }
+
+        // From 1280px to 1535px;
+        @media(min-width: map-get($breakpoints-up, 'xl')) and (max-width: map-get($breakpoints-down, '2xl')) {
+            background-position: right -30vw bottom 0;
+        }
+
+        // Above 1535px
+        @media(min-width: map-get($breakpoints-up, '2xl')) {
+            background-position: right 0 bottom 0;
+        }
     }
 
 }
-
-
 
 #invest__overlay {
     position: absolute;
@@ -250,7 +339,7 @@ a[data-hs-anchor="true"] {
     width: 100%;
     height: 100%;
     background-image: linear-gradient(to right, rgba($gray, 1.0) 50%, rgba($gray, 0));
-    backdrop-filter: brightness(80%) saturate(80%);
+    backdrop-filter: brightness(70%) saturate(70%);
 }
 
 // ********************
@@ -283,9 +372,14 @@ a[data-hs-anchor="true"] {
         background-color: rgba($gray, 0.05);
     }
 
-    img {
-        width: 2rem;
-        height: 2rem;
+}
+
+.faq img {
+    width: 2rem; height: 2rem;
+    transition: transform 0.3s ease-in-out;
+
+    &.is-rotated {
+        transform: rotateZ(180deg);
     }
 
 }
@@ -304,7 +398,37 @@ a[data-hs-anchor="true"] {
         background-image: url('/static/img/matt_final.webp');
         background-repeat: no-repeat;
         background-size: auto 125%;
-        background-position: left -5vw bottom -5vw;
+
+        // Below 639px;
+        @media(max-width: map-get($breakpoints-down, 'small')) {
+            background-position: left -135vw bottom -30vw;
+        }
+        
+        // From 640px to 767px;
+        @media(min-width: map-get($breakpoints-up, 'small')) and (max-width: map-get($breakpoints-down, 'medium')) {
+            background-position: left -90vw bottom -15vw;
+        }
+
+        // From 768px to 1023px;
+        @media(min-width: map-get($breakpoints-up, 'medium')) and (max-width: map-get($breakpoints-down, 'large')) {
+            background-position: left -70vw bottom -15vw;
+        }
+
+        // From 1024px to 1279px;
+        @media(min-width: map-get($breakpoints-up, 'large')) and (max-width: map-get($breakpoints-down, 'xl')) {
+            background-position: left -50vw bottom -10vw;
+        }
+
+        // From 1280px to 1535px;
+        @media(min-width: map-get($breakpoints-up, 'xl')) and (max-width: map-get($breakpoints-down, '2xl')) {
+            background-position: left -30vw bottom -10vw;
+        }
+
+        // Above 1535px
+        @media(min-width: map-get($breakpoints-up, '2xl')) {
+            background-position: left -10vw bottom -5vw;
+        }
+
     }
 
     img {

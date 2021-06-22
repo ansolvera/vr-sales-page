@@ -1,5 +1,4 @@
 form {
-    padding: 2.5rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -10,10 +9,14 @@ form {
         background-color: rgba($white, 0.25);
         color: $white;
 
+        &:focus {
+            outline: 1px solid rgba($white, 0.8);
+        }
+
         &::placeholder {
             font-size: 1.125rem;
             font-weight: 500;
-            color: rgba($white, 0.8);
+            color: rgba($white, 0.5);
         }
 
     }

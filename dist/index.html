@@ -87,12 +87,12 @@
                 <div class="flex-row justify-center items-center">
                     <div id="ribbon" class="flex-row justify-between items-center shadow-lg">
                         <img src="/static/img/volume-icon.svg" alt="Volume icon" class="mr-16">
-                        <p class="text-sm text-center mr-16">Make sure your sound is turned ON!</p>
+                        <p class="text-sm text-center mr-16"><u><strong>Click here</strong> to unmute the video</u></p>
                         <img id="close" src="/static/img/x-icon.svg" alt="Close icon">
                     </div>
                 </div>
                 <div id="hero__video" style="padding:56.25% 0 0 0;position:relative;">
-                    <iframe src="https://player.vimeo.com/video/565736228?badge=0&autopause=0player_id=0&autoplay=1&muted=1&loop=1app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="MHVR Sizzle VSL_2.mp4"></iframe>
+                    <iframe id="video" src="https://player.vimeo.com/video/565736228?badge=0&autopause=0player_id=0&autoplay=1&muted=1app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="MHVR Sizzle VSL_2.mp4"></iframe>
                 </div>
                 <script src="https://player.vimeo.com/api/player.js"></script>
             </div>
@@ -115,20 +115,20 @@
         <!-- TRANSFORM YOUR LIFE -->
         <section id="transform" class="section is-gray py-120">
             <div class="container">
-                <article class="prose">
+                <article class="prose mb-80">
                     <h2 class="text-center mb-80">Transform your life and claim your happiness <span class="gold-text">now</span></h2>
-                    <div id="transform__intro">
-                        <div id="transform__intro__left" class="flex-col justify-center items-center">
-                            <div id="polaroid">
-                                <img src="/static/img/matt_transform.webp" alt="A photograph of Matthew Hussey sitting outside" loading="lazy">
+                    <div class="prose__content">
+                        <div id="transform__intro">
+                            <div id="transform__intro__left" class="flex-col justify-center items-center">
+                                <div id="polaroid">
+                                    <img src="/static/img/matt_transform.webp" alt="A photograph of Matthew Hussey sitting outside" loading="lazy">
+                                </div>
+                            </div>
+                            <div id="transform__intro__right">
+                                <p>I’m Matthew Hussey, industry leading dating expert, world-renowned personal development coach and New York Times best-selling author.</p>
                             </div>
                         </div>
-                        <div id="transform__intro__right">
-                            <p>I’m Matthew Hussey, industry leading dating expert, world-renowned personal development coach and New York Times best-selling author.</p>
-                        </div>
-                    </div>
-                    <div class="prose__content">
-                        <p>For the past 14 years I’ve coached millions from around the globe through my digital platforms and live events and in that time have developed a reputation for helping people achieve the life they’ve always dreamed of.</p>
+                        <p class="unstyled">For the past 14 years I’ve coached millions from around the globe through my digital platforms and live events and in that time have developed a reputation for helping people achieve the life they’ve always dreamed of.</p>
                         <p>The pinnacle of where I get to do this is in my Live Retreat program, the purpose of which is to take people through a fully immersive process to transform every aspect of not just their lifestyle, but their <span class="highlight"><strong>mindset, relationships, emotional well being</strong></span> and <span class="highlight"><strong>core confidence</strong></span> too.</p>
                         <p>There’s no denying that these unprecedented times have been something none of us could have ever planned for. It was the first time in over 10 years that we’ve had to postpone our Live Retreat, (and the Retreats mean the world to me and my team).</p>
                         <p>But instead of focusing on what we couldn’t do, we decided to figure out what we could do and adapt to the situation, even when the conditions weren’t perfect. And so, we created the Matthew Hussey Virtual Retreat.</p>
@@ -185,6 +185,7 @@
                     </div>
                     <p><em><strong><u>AND</u></strong> when you choose to attend one of our transformational LIVE events in person, before December 31, 2022, the full cost of your Virtual Retreat will be put toward that ticket price (ask for more details).</em> </p>
                 </article>
+                <img id="collage" src="/static/img/collage.webp" alt="A collage of images taken from the previous Matthew Hussey Virtual Retreat.">
             </div>
         </section>
 
@@ -441,7 +442,7 @@
         <!-- BONUS -->
         <section id="bonus" class="section py-120 is-gray">
             <div class="container">
-                <h2 class="text-center mb-80">Section for Bonus</h2>
+                <h2 class="text-center mb-80">Special Limited-Time Bonuses</h2>
                 <div class="callout is-white mb-80">
                     <div class="bonus__img-wrapper shadow-2xl mb-40">
                         <img src="/static/img/matt_qa.webp" alt="A photo of Matthew Hussey pointing at an easel pad" class="bonus__img">

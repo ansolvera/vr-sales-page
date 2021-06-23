@@ -33,17 +33,6 @@ timer();
 setInterval(timer, 1000);
 
 // ********************
-// CLOSE RIBBON
-// ********************
-
-const ribbon = document.querySelector('#ribbon');
-const close = document.querySelector('#close');
-
-close.addEventListener('click', () => {
-    ribbon.classList.add("is-hidden");
-})
-
-// ********************
 // CAROUSEL
 // ********************
 
@@ -62,3 +51,15 @@ embla.slideNodes().forEach((slideNode, index) => {
     slideNode.addEventListener('click', () => onSlideclick(index), false)
 });
 
+// ********************
+// VIDEO RIBBON
+// ********************
+
+let ribbon = document.querySelector('#ribbon');
+let video = document.querySelector('#video');
+
+ribbon.addEventListener('click', () => {
+    let player = new Vimeo.Player(video);
+    player.setMuted(false);
+    ribbon.classList.add("is-hidden");
+})

@@ -60,11 +60,12 @@ a[data-hs-anchor="true"] {
 // PROOF SECTION
 // ********************
 
-#proof {
+.proof__logo {
+    margin: 2.5rem 1.25rem;
+    width: auto; height: 3rem;
 
-    img {
-        margin: 2.5rem 1.25rem;
-        height: 2.5rem;
+    &.large {
+        height: 4.5rem;
     }
 
 }

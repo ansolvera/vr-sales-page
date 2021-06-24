@@ -3,7 +3,7 @@
 // ********************
 
 const countdownWidget = document.querySelector('#countdown');
-const retreatDate = new Date("September 24, 2021 00:00:00").getTime();
+const retreatDate = new Date("July 1, 2021 03:00:00 EDT").getTime();
 
 const timer = () => {
     const now = new Date().getTime();

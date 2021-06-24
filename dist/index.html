@@ -81,8 +81,10 @@
     <main id="main">
 
         <!-- HERO SECTION -->
-        <section id="hero" class="section">
-            <h1 class="sr-only">Matthew Hussey Virtual Retreat</h1>
+        <section id="hero" class="section is-dark-gray py-160">
+            <div id="hero__overlay"></div>
+            <div class="container">
+                <h1 class="sr-only">Matthew Hussey Virtual Retreat</h1>
             <div id="hero__video-wrapper">
                 <div class="flex-row justify-center items-center">
                     <div id="ribbon" class="flex-row justify-between items-center shadow-lg">
@@ -91,10 +93,11 @@
                         <img id="close" src="/static/img/x-icon.svg" alt="Close icon">
                     </div>
                 </div>
-                <div id="hero__video" style="padding:56.25% 0 0 0;position:relative;">
+                <div id="hero__video" class="shadow-2xl" style="padding:56.25% 0 0 0;position:relative;">
                     <iframe id="video" src="https://player.vimeo.com/video/565736228?badge=0&autopause=0player_id=0&autoplay=1&muted=1app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="MHVR Sizzle VSL_2.mp4"></iframe>
                 </div>
                 <script src="https://player.vimeo.com/api/player.js"></script>
+            </div>
             </div>
         </section>
 
